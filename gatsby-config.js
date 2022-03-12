@@ -13,6 +13,19 @@ module.exports = {
         path: `${__dirname}/content/blog/`,
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+            },
+          },
+        ],
+      },
+    },
+    "gatsby-transformer-sharp",
   ],
 };
