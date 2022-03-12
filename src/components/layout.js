@@ -38,7 +38,7 @@ const Layout = ({ pageTitle, children, location }) => {
         <nav>
           <ul>
             {linkPages.map((page) => (
-              <li>
+              <li key={page.name}>
                 <Link to={page.link} activeStyle={{ color: "red" }}>
                   {page.name}
                 </Link>
