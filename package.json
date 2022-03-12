@@ -21,7 +21,9 @@
     "gatsby-plugin-image": "^2.9.1",
     "gatsby-plugin-mdx": "^3.9.1",
     "gatsby-plugin-sharp": "^4.9.1",
+    "gatsby-remark-images": "^6.9.1",
     "gatsby-source-filesystem": "^4.9.1",
+    "gatsby-transformer-sharp": "^4.9.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   }
