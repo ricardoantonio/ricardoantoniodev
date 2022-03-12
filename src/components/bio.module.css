@@ -1,0 +1,36 @@
+.bio-container {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.hero-description {
+  font-size: var(--font-size-2);
+}
+
+.emoji-hello {
+  font-size: var(--font-size-4);
+  margin-right: 1rem;
+}
+
+.span-hello {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-3);
+  font-weight: 500;
+  font-style: italic;
+}
+
+.degree {
+  color: var(--color-primary);
+}
+
+.bio-footer {
+  margin-top: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.media-container {
+  display: flex;
+  gap: 2.4rem
+}

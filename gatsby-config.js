@@ -27,5 +27,13 @@ module.exports = {
       },
     },
     "gatsby-transformer-sharp",
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Fraunces:i400,i500,700', 'Inter:400,500,700,i400,i700', 'JetBrains Mono']
+        }
+      }
+    },
   ],
 };

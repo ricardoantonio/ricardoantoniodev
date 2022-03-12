@@ -1,0 +1,34 @@
+.btn {
+  display: inline-block;
+  position: relative;
+  padding: .4rem 1.6rem;
+  font-weight: 500;
+}
+
+.btn:link,
+.btn:visited {
+  transition: all 0.2s;
+}
+
+.btn:hover,
+.btn:active {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.btn:link::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  background-color: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.2s;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.btn:hover::before {
+  height: 100%;
+}

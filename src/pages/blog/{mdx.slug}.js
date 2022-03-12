@@ -9,15 +9,22 @@ const PostPage = ({ data, location }) => {
 
   return (
     <Layout pageTitle={data.mdx.frontmatter.title} location={location}>
-      <p>Posted: {data.mdx.frontmatter.date}</p>
-      {heroImage && (
-        <GatsbyImage
-          image={heroImage}
-          alt={data.mdx.frontmatter.hero_image_alt}
-        />
-      )}
-
+      <article className="blog-container">
+      <header>
+        <h1 style={{ marginBottom: 0}}>
+          {data.mdx.frontmatter.title}
+        </h1>
+        <small style={{display:'block', marginBottom: '1.6rem'}}>Publicado el {data.mdx.frontmatter.date}</small>
+        {heroImage && (
+          <GatsbyImage
+            image={heroImage}
+            alt={data.mdx.frontmatter.hero_image_alt}
+            style={{marginBottom: '3.2rem'}}
+          />
+        )}
+      </header>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
+      </article>
     </Layout>
   );
 };
@@ -27,7 +34,7 @@ export const query = graphql`
     mdx(id: { eq: $id }) {
       frontmatter {
         title
-        date
+        date(formatString: "dddd, D [de] MMMM [de] YYYY", locale: "es")
         hero_image_alt
         hero_image {
           childImageSharp {

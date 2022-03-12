@@ -1,0 +1,55 @@
+.nav-bar {
+  max-width: 90rem;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem
+}
+.logo {
+  fill-rule:evenodd;
+  clip-rule:evenodd;
+  stroke-linejoin:round;
+  stroke-miterlimit:2;
+  height: 2.4rem;
+  width: 2.4rem;
+  fill: var(--color-primary)
+}
+
+.nav-container {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.nav-link{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  fill: var(--color-primary);
+}
+
+.nav-icon{
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.nav-link:link,
+.nav-link:hover {
+  transition: all 0.2s;
+}
+
+.nav-link-active:hover,
+.nav-link-active:active {
+  text-decoration: none;
+}
+
+.nav-link-active {
+  font-weight: 700;
+}
