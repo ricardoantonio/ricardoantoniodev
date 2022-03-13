@@ -11,8 +11,9 @@
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 0.5rem
+  gap: 0.5rem;
 }
+
 .logo {
   fill-rule:evenodd;
   clip-rule:evenodd;
@@ -20,7 +21,7 @@
   stroke-miterlimit:2;
   height: 2.4rem;
   width: 2.4rem;
-  fill: var(--color-primary)
+  fill: var(--color-primary);
 }
 
 .nav-container {

@@ -53,7 +53,7 @@ const Bio = () => {
         <ul className={mediaContainer}>
           {socialMedia.map((media) => (
             <li key={media.media}>
-              <a href={media.link}>
+              <a href={media.link} aria-label={`Enlace a mi perfil de ${media.media}`}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"

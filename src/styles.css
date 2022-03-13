@@ -1,6 +1,6 @@
 :root {
-  --color-primary: #398AB9;
-  --color-text: #393E46;
+  --color-primary: #1C658C;
+  --color-text: #393e46;
   --color-white: #ebf3f8;
 
   --font-serif: "Fraunces", serif;
@@ -32,7 +32,7 @@ body {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 strong {
@@ -50,7 +50,7 @@ pre {
 }
 
 pre {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 h1,
@@ -91,12 +91,14 @@ small {
   font-size: var(--font-small);
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
   color: var(--color-primary);
   text-decoration: none;
 }
 
-a:hover, a:active {
+a:hover,
+a:active {
   text-decoration: underline;
 }
 
@@ -106,12 +108,34 @@ article li {
 
 article ul {
   list-style: disc;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 article ol {
   list-style: decimal;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
+}
+
+blockquote {
+  background-color: rgba(206, 206, 206, 0.336);
+  padding: 1.6rem 2.4rem;
+  border-radius: 5px;
+  position: relative;
+  border-left: 3px solid var(--color-text);
+  margin-bottom: 1.6rem;
+}
+
+blockquote::before {
+  content: '"';
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 10rem;
+  color: rgb(230, 230, 230);
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  z-index: -1;
 }
 
 .container {
