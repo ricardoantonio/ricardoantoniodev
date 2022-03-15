@@ -6,6 +6,7 @@ import {
   btnIcon,
   tag,
   card,
+  cardImage,
   cardContent,
   cardTitle,
   cardTags,
@@ -34,7 +35,7 @@ const ProjectCard = ({
 }) => {
   return (
     <div className={card}>
-      <GatsbyImage alt="imagen" image={screenshot} />
+      <GatsbyImage alt="imagen" image={screenshot} className={cardImage}/>
       <div className={cardContent}>
         <h3 className={cardTitle}>{title}</h3>
         <div className={cardTags}>
