@@ -1,0 +1,11 @@
+- title: "SimCo Tools"
+  screenshot: "./simcotools.jpg"
+  tags: [React, JavaScript, Flask, Pyhton, Postgresql]
+  description: "Proyecto Fullstack. En el frontend diseñé la interfaz con React, y librerías como am5 para generar gráficas. Para las apis del backend utilicé python con Flask y bases de datos en postgresql."
+  live_link: "https://simcotools.app"
+- title: "Landing Page"
+  screenshot: "./landingpage.jpg"
+  tags: [HTML, CSS, JavaScript, Responsive Desing]
+  description: "Landing page para aplicar mis conocimientos Diseño Web Responsivo, uso de HTML, CSS y JavaScript. Posee diferentes secciones, un formulario y menú desplegable para dispositivos pequeños."
+  live_link: "https://codepen.io/ricardoantonio/full/zYEexdm"
+  code_link: "https://codepen.io/ricardoantonio/pen/zYEexdm"
