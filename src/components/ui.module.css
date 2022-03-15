@@ -1,18 +1,22 @@
 .btn {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   position: relative;
-  padding: .4rem 1.6rem;
+  padding: 0.4rem 0.8rem;
   font-weight: 500;
 }
 
 .btn:link,
 .btn:visited {
+  fill: var(--color-primary);
   transition: all 0.2s;
 }
 
 .btn:hover,
 .btn:active {
   color: var(--color-white);
+  fill: var(--color-white);
   text-decoration: none;
 }
 
@@ -31,4 +35,47 @@
 
 .btn:hover::before {
   height: 100%;
+}
+
+.btn-icon {
+  height: 1.6rem;
+}
+
+.tag {
+  color: var(--color-primary);
+  font-size: var(--font-small);
+  font-weight: 500;
+  border: 1px solid var(--color-primary);
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+}
+
+.card {
+  max-width: 40rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 1.6rem 1.6rem 0;
+}
+
+.card-title {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.card-buttons {
+  padding: 1.6rem;
+  display: flex;
+  gap: 1.6rem;
+  margin-top: auto;
 }

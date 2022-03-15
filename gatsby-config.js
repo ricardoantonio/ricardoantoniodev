@@ -14,6 +14,26 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/projects`,
+        name: `projects`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        // Conditionally set the typeName so that we both use a lowercased and capitalized type name
+        typeName: ({ node }) => {
+          const name = node.sourceInstanceName
+          if (name === `projects`) {
+            return `projects`
+          }
+          return name
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
