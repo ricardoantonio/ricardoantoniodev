@@ -4,7 +4,10 @@ import {
   bioContainer,
   degree,
   heroDescription,
-  mediaContainer, spanHello, emojiHello, bioFooter
+  mediaContainer,
+  spanHello,
+  emojiHello,
+  bioFooter,
 } from "./bio.module.css";
 
 const mediaIcon = {
@@ -42,7 +45,8 @@ const socialMedia = [
 const Bio = () => {
   return (
     <div className={bioContainer}>
-      <span className={emojiHello}>🙋🏻‍♂️</span><span className={spanHello}>¡Hola!</span>
+      <span className={emojiHello}>🙋🏻‍♂️</span>
+      <span className={spanHello}>¡Hola!</span>
       <h1>Soy Ricardo Antonio</h1>
       <p className={heroDescription}>
         <span className={degree}>Desarrollador Web Frontend.</span> Amante de
@@ -53,7 +57,10 @@ const Bio = () => {
         <ul className={mediaContainer}>
           {socialMedia.map((media) => (
             <li key={media.media}>
-              <a href={media.link} aria-label={`Enlace a mi perfil de ${media.media}`}>
+              <a
+                href={media.link}
+                aria-label={`Enlace a mi perfil de ${media.media}`}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 512 512"
@@ -65,7 +72,7 @@ const Bio = () => {
             </li>
           ))}
         </ul>
-        <Button link='#'>Contactar</Button>
+        <Button link="#contact-form">Contactar</Button>
       </div>
     </div>
   );

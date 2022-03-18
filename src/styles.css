@@ -151,5 +151,49 @@ blockquote::before {
 }
 
 .section {
-  padding: 6.2rem 0;
+  padding: 3.6rem 0;
+}
+
+.form {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.field {
+display: flex;
+flex-direction: column;
+}
+
+.field:focus-within label{
+  color: #1C658C;
+  font-weight: 700;
+}
+
+.form label {
+  width: fit-content;
+  padding: 0 0.4rem;
+  font-size: var(--font-small);
+  transform: translate(1rem,50%);
+  background-color: white;
+}
+
+.form input, textarea {
+  padding: 1.2rem;
+  border: 2px solid #AAA;
+  border-radius: 4px;
+  font-size: var(--font-size-1);
+}
+
+.form input:hover, textarea:hover {
+  border: 2px solid #555
+}
+
+.form input:focus, textarea:focus{
+  outline: none;
+  border: 2px solid var(--color-primary);
+  border-radius: 4px;
+}
+
+.input:focus-within {
+  background-color: red;
 }
