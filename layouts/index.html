@@ -1,4 +1,12 @@
 {{ define "main" }}
-  {{ .Title }}
+  <h1>{{ .Title }}</h1>
   {{ .Content }}
+  <h2>De mi blog</h2>
+  {{ range (where .Site.Pages "Section" "blog") }}
+    <ul>
+      {{ range first 3 .Pages }}
+        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
 {{ end }}
