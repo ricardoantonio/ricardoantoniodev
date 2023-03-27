@@ -1,5 +1,5 @@
 <nav>
-  <a href="/">{{ .Site.Title }}</a>
+  <a href="{{ relref . (dict "path" "/" "lang" .Lang) }}">{{ .Site.Title }}</a>
   <ul>
     {{ range .Site.Menus.main }}
       <li><a href="{{ .URL }}">{{ .Name }}</a></li>
