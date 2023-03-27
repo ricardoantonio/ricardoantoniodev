@@ -3,3 +3,37 @@ languageCode = 'es'
 title = 'Ricardo Antonio'
 defaultContentLanguage = 'es'
 removePathAccents = true
+
+[menu]
+[[menu.main]]
+  name = 'Blog'
+  pageRef = '/blog'
+  weight = 20
+[[menu.main]]
+  name = 'Acerca de'
+  pageRef = '/about'
+  weight = 30
+[[menu.main]]
+  name = 'Contacto'
+  pageRef = '/contact'
+  weight = 40
+
+[languages]
+  [languages.es]
+    languageName = 'Español'
+    weight = 1
+  [languages.en]
+    languageName = 'English'
+    weight = 2
+    [[languages.en.menu.main]]
+      name="Blog"
+      pageRef='/blog'
+      weight=20
+    [[languages.en.menu.main]]
+        name="About"
+        pageRef='/about'
+        weight=30
+    [[languages.en.menu.main]]
+        name="Contact"
+        pageRef='/contact'
+        weight=40
