@@ -1,0 +1,15 @@
+{
+  "name": "ricardoantoniodev",
+  "version": "1.0.0",
+  "description": "This is the code for my personal web site made with [Hugo](https://gohugo.io/), an static site generator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.7",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
