@@ -1,0 +1,5 @@
+baseURL = 'https://ricardoantonio.dev/'
+languageCode = 'es'
+title = 'Ricardo Antonio'
+defaultContentLanguage = 'es'
+removePathAccents = true
