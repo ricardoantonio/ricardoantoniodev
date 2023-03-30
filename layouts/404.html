@@ -1,0 +1,18 @@
+{{ define "main" }}
+  <main id="main">
+    <div>
+      <section class="section-page-header">
+        <div class="container">
+          <div class="page-header">
+            <h1>{{ i18n "page_not_found" }}</h1>
+            <a
+              href="{{ relref . (dict "path" "/" "lang" .Lang) }}"
+              class="navbar__brand"
+              >{{ i18n "go_homepage" }}...</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+{{ end }}

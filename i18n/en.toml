@@ -34,3 +34,9 @@
 
 [previous]
   other = "Anterior"
+
+[page_not_found]
+  other = 'Page not found'
+
+[go_homepage]
+  other = 'Go to homepage'
