@@ -32,6 +32,15 @@
   color: var(--color-primary--dim);
 }
 
+.navbar__brand.home-icon {
+  display: none;
+}
+
+.navbar__brand.home-icon .bi {
+  height: 2rem;
+  width: 2rem;
+}
+
 .navbar__menu {
   display: flex;
   margin-left: auto;

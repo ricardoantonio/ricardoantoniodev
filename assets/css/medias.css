@@ -3,11 +3,6 @@
     font-size: 55%;
   }
 
-  .navbar .container {
-    flex-direction: column-reverse;
-    gap: 0rem;
-  }
-
   .navbar__menu {
     width: 100%;
     margin-left: 0;
@@ -23,6 +18,15 @@
     height: 5rem;
     display: flex;
     align-items: center;
+  }
+
+  .navbar__brand.home-link {
+    display: none;
+  }
+
+  .navbar__brand.home-icon {
+    display: block;
+    margin-top: 1rem;
   }
 
   .navbar__menu {
