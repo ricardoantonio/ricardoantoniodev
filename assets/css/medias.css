@@ -15,7 +15,6 @@
   .navbar__brand,
   .navbar__brand:link,
   .navbar__brand:visited {
-    height: 5rem;
     display: flex;
     align-items: center;
   }
