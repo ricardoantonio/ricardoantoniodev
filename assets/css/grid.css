@@ -1,0 +1,30 @@
+.page-container {
+  min-height: calc(100% - 16.6rem);
+}
+
+.container {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.grid {
+  display: grid;
+}
+
+.col-2 {
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap--content);
+}
+
+.pd-left--sm {
+  padding-left: 1rem;
+}
+
+.mg-top--sm {
+  margin-top: 1rem;
+}
+
+.mg-top--lg {
+  margin-top: 3.2rem !important;
+}

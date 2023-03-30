@@ -1,4 +1,16 @@
-<footer>
-  {{ .Site.Title }} &#169;
-  {{ now.Year }}
+<footer class="section-footer">
+  <div class="footer container grid col-2">
+    <div class="copy">
+      <p>{{ .Site.Title }} &#169; {{ now.Year }}</p>
+      <p>
+        {{ range .Site.Menus.legal }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+      </p>
+    </div>
+
+    <div class="footer__media">
+      {{ partial "socialmedia.html" . }}
+    </div>
+  </div>
 </footer>

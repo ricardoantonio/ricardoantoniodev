@@ -1,0 +1,117 @@
+{{ define "main" }}
+  <article>
+    <header class="section-page-header">
+      <div class="container page-header">
+        <h1>{{ .Title }}</h1>
+        {{ partial "postinfo.html" . }}
+      </div>
+      {{ if .Params.featured_image }}
+        {{ $cover := .Resources.Get .Params.featured_image }}
+        <section class="section-featured-image">
+          {{ with .Resources.GetMatch .Params.featured_image }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+              <img src="{{ .RelPermalink }}" role="presentation" />
+            {{ end }}
+          {{ end }}
+        </section>
+      {{ end }}
+    </header>
+    <section class="section-content">
+      <div class="container text">
+        {{ .Content }}
+      </div>
+      <div class="container">
+        <div class=" blog-navigation">
+          <div class="previous-post">
+            {{ with .PrevInSection }}
+              <div class="posts-list__item__image">
+                {{ if .Params.featured_image }}
+                  {{ with .Resources.Get .Params.featured_image }}
+                    {{ with .Fill "200x200 center webp" }}
+                      <img
+                        src="{{ .Permalink }}"
+                        role="presentation"
+                        width="50"
+                        height="50"
+                      />
+                    {{ end }}
+                  {{ end }}
+                {{ else }}
+                  {{ $cover := resources.Get "img/featured.png" }}
+                  <img
+                    src="{{ $cover.Permalink }}"
+                    height="50"
+                    width="50"
+                    role="presentation"
+                  />
+                {{ end }}
+              </div>
+              <div class="navigation-title">
+                <p>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-left-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"
+                    />
+                  </svg>
+                  {{ i18n "previous" }}
+                </p>
+                <a href="{{ .Permalink }}">{{ .Name }}</a>
+              </div>
+            {{ end }}
+          </div>
+          <div class="next-posts">
+            {{ with .NextInSection }}
+              <div class="navigation-title">
+                <p>
+                  {{ i18n "next" }}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-caret-right-fill"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
+                    />
+                  </svg>
+                </p>
+                <a href="{{ .Permalink }}">{{ .Name }}</a>
+              </div>
+              <div class="posts-list__item__image">
+                {{ if .Params.featured_image }}
+                  {{ with .Resources.Get .Params.featured_image }}
+                    {{ with .Fill "200x200 center webp" }}
+                      <img
+                        src="{{ .Permalink }}"
+                        role="presentation"
+                        width="50"
+                        height="50"
+                      />
+                    {{ end }}
+                  {{ end }}
+                {{ else }}
+                  {{ $cover := resources.Get "img/featured.png" }}
+                  <img
+                    src="{{ $cover.Permalink }}"
+                    height="50"
+                    width="50"
+                    role="presentation"
+                  />
+                {{ end }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+{{ end }}

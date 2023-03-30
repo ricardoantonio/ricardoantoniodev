@@ -1,4 +1,17 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{{ with .Page.Params.description }}
+  <meta name="description" content="{{ . }}" />
+{{ else }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
+{{ end }}
+
+{{ $cssReset := resources.Get "css/reset.css" }}
+{{ $cssGlobals := resources.Get "css/globals.css" }}
+{{ $cssGrid := resources.Get "css/grid.css" }}
+{{ $cssComponents := resources.Get "css/components.css" }}
+{{ $cssMedias := resources.Get "css/medias.css" }}
+{{ $styles := slice $cssReset $cssGlobals $cssGrid $cssComponents $cssMedias | resources.Concat "main.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" />
 <title>{{ .Site.Title }} | {{ .Title }}</title>

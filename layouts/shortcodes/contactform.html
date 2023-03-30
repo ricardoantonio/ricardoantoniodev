@@ -1,0 +1,48 @@
+<section class="section-contact-form">
+  <form name="contact" data-netlify="true" class="form" id="contact-form">
+    <div class="form-group">
+      <label>{{ i18n "your_name" }}: <input type="text" name="name" /></label>
+    </div>
+    <div class="form-group">
+      <label
+        >{{ i18n "your_email" }}: <input type="email" name="email"
+      /></label>
+    </div>
+    <div class="form-group">
+      <label>{{ i18n "message" }}: <textarea name="message"></textarea></label>
+    </div>
+
+    <div class="form-group submit">
+      <a href="{{ ref . "privacy" }}" target="_blank"
+        >{{ i18n "privacy_policy" }}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-box-arrow-up-right"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"
+          />
+          <path
+            fill-rule="evenodd"
+            d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"
+          /></svg
+      ></a>
+      <button class="btn btn-base btn-secondary" type="submit">
+        {{ i18n "send" }}
+      </button>
+    </div>
+  </form>
+  <div class="send-message" id="success-message">
+    <h2>¡Gracias!</h2>
+    <p>
+      Tu mensaje ha sido enviado. Te responderé tan pronto como sea posible.
+    </p>
+  </div>
+  {{ $js := resources.Get "js/netlifyform.js" | resources.Minify }}
+  <script src="{{ $js.Permalink }}"></script>
+</section>

@@ -1,0 +1,36 @@
+['contactme']
+  other = "Let's talk!"
+
+['from_my_blog']
+  other= "From my blog..."
+
+[link_to_twitter]
+  other = "Link to Ricardo Antonio's twitter profile"
+
+[link_to_github]
+  other = "Link to Ricardo Antonio's github profile"
+
+[time_to_read]
+  one = 'One minute to read'
+  other = '{{ .Count }} minutes to read'
+
+[your_name]
+  other = 'Your name'
+
+[your_email]
+  other = 'Your email'
+
+[message]
+  other = 'Message'
+
+[send] 
+  other = 'Send'
+
+[privacy_policy]
+ other = 'Privacy policy'
+
+[next]
+  other = "Siguiente"
+
+[previous]
+  other = "Anterior"

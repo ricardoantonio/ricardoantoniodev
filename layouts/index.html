@@ -1,12 +1,44 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  <h2>De mi blog</h2>
-  {{ range (where .Site.Pages "Section" "blog") }}
-    <ul>
-      {{ range first 3 .Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
-      {{ end }}
-    </ul>
+  <header class="section-home-hero">
+    <div class="container home-hero">
+      <div class="resume-card">
+        <h1 class="resume-card__title">{{ .Site.Title }}</h1>
+        <p class="resume-card__description">
+          {{ with .Params.Subtitle }}
+            <span class="resume-card__subtitle">{{ . }}. </span>
+          {{ end }}
+          {{ .Plain }}
+        </p>
+        {{ partial "socialmedia.html" . }}
+        <div class="mg-top--lg">
+          <a
+            href="{{ relref . (dict "path" "/contact" "lang" .Lang) }}"
+            class="btn btn-base btn-secondary"
+            >{{ i18n "contactme" }}</a
+          >
+        </div>
+      </div>
+    </div>
+  </header>
+  {{ if len (where .Site.RegularPages "Section" "==" "blog") }}
+    <section class="section-recent-posts">
+      <div class="container">
+        <h2 class="section-title">{{ i18n "from_my_blog" }}</h2>
+        {{ range (where .Site.Pages "Section" "blog") }}
+          <ul class="posts-list">
+            {{ range first 3 .Pages }}
+              {{ partial "postitem.html" . }}
+            {{ end }}
+          </ul>
+        {{ end }}
+        <div class="text mg-top--sm pd-left--sm">
+          <p>
+            <a href="{{ relref . (dict "path" "/blog" "lang" .Lang) }}"
+              >Ver Mas...</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
   {{ end }}
 {{ end }}

@@ -1,0 +1,36 @@
+['contactme']
+  other = "¡Hablemos!"
+
+['from_my_blog']
+  other= "De mi blog..."
+
+[link_to_twitter]
+  other = 'Enlace al perfil de Twitter de Ricardo Antonio'
+
+[link_to_github]
+  other = 'Enlace al perfil de Github de Ricardo Antonio'
+
+[time_to_read]
+  one = 'Un minuto de lectura'
+  other = '{{ .Count }} minutos de lectura'
+  
+[your_name]
+  other = 'Tu nombre'
+
+[your_email]
+  other = 'Tu correo electrónico'
+
+[message]
+  other = 'Mensaje'
+
+[send] 
+  other = 'Enviar'
+
+[privacy_policy]
+  other = 'Política de privacidad'
+
+[next]
+  other = "Siguiente"
+
+[previous]
+  other = "Anterior"

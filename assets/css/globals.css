@@ -1,0 +1,247 @@
+:root {
+  --color-primary: #aa5042;
+  --color-primary--dim: #c06b5d;
+  --color-primary--dark: #934539;
+
+  --color-primary: #1a5b92;
+  --color-primary--dim: #16679a;
+  --color-primary--dark: #1c558e;
+
+  --color-secondary: #ad2e24;
+  --color-secondary--dim: #c75146;
+  --color-secondary--dark: #81171b;
+
+  --color-background: #fff;
+  --color-background--dim: #eee;
+  --color-background--dark: #555;
+
+  --color-text: #444;
+  --color-text--dim: #666;
+  --color-text--dark: #000;
+  --color-text--white: #fff;
+  --color-text--white--dim: #ddd;
+
+  --color-link: #316fad;
+  --color-link--hover: #2f82d5;
+
+  --shadow--base: 0 0 8px #00000050;
+
+  --typo--sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --typo--serif: Georgia, serif;
+  --typo--mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --font-size--base: 1.8rem;
+  --gap--content: 2.4rem;
+}
+
+::-moz-selection {
+  background-color: #e4e4e4;
+}
+
+::selection {
+  background-color: #e4e4e4;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #333;
+  }
+}
+
+/* Animations deactivated for accesibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--typo--serif);
+  font-size: var(--font-size--base);
+  color: var(--color-text);
+  background-color: var(--color-backgrund);
+  line-height: 1.5;
+}
+
+.text p {
+  hyphens: auto;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.text p:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.text strong {
+  font-weight: 700;
+}
+
+.text em {
+  font-style: italic;
+}
+
+.text a:link,
+.text a:visited {
+  font-weight: 700;
+  color: var(--color-link);
+  transition: color 0.2s;
+}
+
+.text a:hover,
+.text active {
+  color: var(--color-link--hover);
+}
+
+.text h2,
+.text h3,
+.text h4,
+.text h5,
+.text h6 {
+  font-family: var(--typo--sans);
+  color: var(--color-text--dim);
+  font-weight: 700;
+}
+
+.text h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  margin-bottom: 1rem;
+}
+
+.text h2:not(:first-child) {
+  margin-top: 4.8rem;
+}
+
+.text h3 {
+  font-size: 2.2rem;
+  letter-spacing: -0.007rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.text h3:not(:first-child) {
+  margin-top: 3.2rem;
+}
+
+.highlight pre {
+  line-height: 1 !important;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.text pre {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-family: var(--typo--mono);
+  overflow-x: auto;
+  background-color: var(--color-background--dark);
+  color: var(--color-text--white);
+  padding: 1rem;
+}
+
+.text p code {
+  background-color: var(--color-background--dim);
+  font-family: var(--typo--mono);
+  padding: 0.25rem 0.5rem;
+}
+
+.text ul,
+.text ol {
+  margin-left: 4.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.text ul li {
+  padding-left: 0.5rem;
+  list-style-type: disc;
+}
+
+.text ol li {
+  padding-left: 0.5rem;
+  list-style: decimal;
+}
+
+.text ul ul {
+  margin-bottom: 0.8rem;
+}
+
+.text ol ol {
+  margin-bottom: 0.8rem;
+}
+
+.text blockquote {
+  position: relative;
+  padding: 1.6rem 1.6rem 1.6rem 4rem;
+  background-color: var(--color-background--dim);
+  margin: 1.6rem 3rem;
+  border-left: 5px solid var(--color-background--dark);
+}
+
+.text blockquote::after {
+  content: "";
+  position: absolute;
+  top: 1.6rem;
+  left: 0.8rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-quote' viewBox='0 0 16 16'%3E%3Cpath d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z'/%3E%3C/svg%3E");
+  background-size: cover;
+}
+
+.text hr {
+  border-bottom: 1px solid var(--color-text--dim);
+  margin: 1.6rem 0;
+}
+
+.text del {
+  text-decoration: line-through;
+}
+
+.text table {
+  max-width: 100%;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+.text table th {
+  font-weight: 700;
+  background-color: var(--color-background--dim);
+}
+
+.text table th,
+.text table td {
+  padding: 1px 10px;
+  border: 1px solid gray;
+}
+
+.text .footnotes {
+  font-size: 1.4rem;
+}
+
+.text .footnotes li,
+.text .footnotes p {
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-top: 0;
+}

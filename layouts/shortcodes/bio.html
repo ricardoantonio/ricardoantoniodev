@@ -1,0 +1,74 @@
+<div class="section-bio">
+  {{ $profilePic := resources.Get "img/profilepic.jpg" }}
+  {{ with $profilePic.Resize "400x400 webp" }}
+    <img src="{{ .Permalink }}" role="presentation" width="200" height="200" />
+  {{ end }}
+  <div class="bio-description">
+    {{ .Inner }}
+  </div>
+</div>
+
+<style>
+  .section-bio {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(90px, 150px) minmax(250px, 1fr);
+    column-gap: 1.6rem;
+    row-gap: 1.6rem;
+    margin-bottom: 3.2rem;
+    padding: 3rem 2rem;
+  }
+
+  .section-bio::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 150vw;
+    background-color: var(--color-background--dim);
+    top: 0;
+    left: -50%;
+    z-index: -1;
+  }
+
+  .bio-hello {
+    font-size: 2.8rem;
+    font-weight: 700;
+  }
+
+  .bio-description p {
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    word-spacing: 1px;
+    margin-bottom: 0;
+    font-family: var(--typo--sans);
+    color: var(--color-text);
+    hyphens: none;
+    -ms-hyphens: none;
+    -moz-hyphens: none;
+    -webkit-hyphens: none;
+  }
+
+  .section-bio img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 500px) {
+    .section-bio img {
+      max-width: 150px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 50%;
+    }
+
+    .section-bio {
+      grid-template-columns: 1fr;
+      align-items: center;
+      padding: 3rem 2rem 1rem;
+    }
+
+    .bio-description p {
+      text-align: center;
+    }
+  }
+</style>

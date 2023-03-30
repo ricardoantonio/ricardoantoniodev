@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <article>
+  <main>
     <header class="section-page-header">
       <div class="container page-header">
         <h1>{{ .Title }}</h1>
@@ -9,6 +9,13 @@
       <div class="container text">
         {{ .Content }}
       </div>
+      <div class="container mg-top--lg">
+        <ul>
+          {{ range .Pages }}
+            {{ partial "postitem.html" . }}
+          {{ end }}
+        </ul>
+      </div>
     </section>
-  </article>
+  </main>
 {{ end }}

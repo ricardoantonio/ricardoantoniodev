@@ -1,13 +1,19 @@
 {{ define "main" }}
   <main>
-    <header>
-      <h1>{{ .Title }}</h1>
+    <header class="section-page-header">
+      <div class="container page-header">
+        <h1>{{ .Title }}</h1>
+      </div>
     </header>
-    {{ .Content }}
-    <ul>
-      {{ range .Pages }}
-        <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
+    <section class="section-content">
+      <div class="container">
+        {{ .Content }}
+        <ul>
+          {{ range .Pages }}
+            <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </section>
   </main>
 {{ end }}

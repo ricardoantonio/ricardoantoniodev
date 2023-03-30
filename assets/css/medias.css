@@ -1,0 +1,39 @@
+@media (max-width: 550px) {
+  html {
+    font-size: 55%;
+  }
+
+  .navbar .container {
+    flex-direction: column-reverse;
+    gap: 0rem;
+  }
+
+  .navbar__menu {
+    width: 100%;
+    margin-left: 0;
+    flex-wrap: wrap;
+    column-gap: 1.6rem;
+    row-gap: 0;
+    justify-content: flex-end;
+  }
+
+  .navbar__brand,
+  .navbar__brand:link,
+  .navbar__brand:visited {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar__menu {
+    gap: 0;
+  }
+
+  .section-featured-image img {
+    aspect-ratio: 2.4 / 1;
+  }
+
+  .section-contact-form {
+    padding: 1rem;
+  }
+}

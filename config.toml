@@ -4,6 +4,11 @@ title = 'Ricardo Antonio'
 defaultContentLanguage = 'es'
 removePathAccents = true
 
+[params]
+  twitter = 'https://twitter.com/rantoniodev'
+  github = 'https://github.com/ricardoantonio'
+  description = "Soy un Desarrollador Web apasionado por la programación, en constante proceso de aprendizaje y deseando poder colaborar contigo en cualquier proyecto que tengas en mente. Este es mi sitio web personal."
+
 [menu]
 [[menu.main]]
   name = 'Blog'
@@ -17,6 +22,11 @@ removePathAccents = true
   name = 'Contacto'
   pageRef = '/contact'
   weight = 40
+[[menu.legal]]
+  name='Política de Privacidad'
+  pageRef='/privacy'
+  weight=10
+  
 
 [languages]
   [languages.es]
@@ -25,6 +35,8 @@ removePathAccents = true
   [languages.en]
     languageName = 'English'
     weight = 2
+    [languages.en.params]
+      description = "I'm a Web Developer passionate about coding, constantly learning and looking forward to collaborating with you on any project you have in mind. This is my personal website."
     [[languages.en.menu.main]]
       name="Blog"
       pageRef='/blog'
@@ -37,3 +49,7 @@ removePathAccents = true
         name="Contact"
         pageRef='/contact'
         weight=40
+    [[languages.en.menu.legal]]
+        name='Privacy Policy'
+        pageRef='/privacy'
+        weight=10
