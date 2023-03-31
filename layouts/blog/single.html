@@ -112,7 +112,11 @@
           </div>
         </div>
         <section class="section-comments">
-          {{ template "_internal/disqus.html" . }}
+          <script>
+            var disqus_config = function () {
+              this.language = "{{ .Language.Lang }}" ;
+            };
+          </script> {{ template "_internal/disqus.html" . }}
         </section>
       </div>
     </section>
