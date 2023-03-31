@@ -17,7 +17,7 @@
       {{ end }}
     </header>
     <section class="section-content">
-      <div class="container text">
+      <div class="container text post-text">
         {{ .Content }}
       </div>
       <div class="container">
@@ -111,6 +111,9 @@
             {{ end }}
           </div>
         </div>
+        <section class="section-comments">
+          {{ template "_internal/disqus.html" . }}
+        </section>
       </div>
     </section>
   </article>
