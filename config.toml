@@ -3,6 +3,7 @@ languageCode = 'es'
 title = 'Ricardo Antonio'
 defaultContentLanguage = 'es'
 removePathAccents = true
+disqusShortname = 'ricardoantoniodev'
 
 [params]
   twitter = 'https://twitter.com/rantoniodev'
