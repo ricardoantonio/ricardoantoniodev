@@ -368,6 +368,17 @@
   padding: 3.8rem 0 0;
 }
 
+.post-text p:first-child::first-letter {
+  font-size: 250%;
+  padding: 1rem 0.3rem 0;
+  float: left;
+  initial-letter: 2;
+  -webkit-initial-letter: 2;
+  margin-right: 0.5rem;
+  color: var(--color-text);
+  font-weight: 400;
+}
+
 .next-posts,
 .previous-post {
   display: flex;
