@@ -33,7 +33,7 @@ In the backend, I used Python with Flask to create APIs that support the applica
 <img src="simcotools-04.png" role="presentation"/>
 {{< /gallery>}}
 
-[Go to the proyect...](https://simcotools.app)
+[Go to the project...](https://simcotools.app)
 
 ---
 
