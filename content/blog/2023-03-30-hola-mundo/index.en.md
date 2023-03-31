@@ -5,7 +5,6 @@ date: 2023-03-30T14:08:50-06:00
 tags: [personal]
 description:
 featured_image: holamundo.png
-draft: true
 ---
 
 If you are a programmer, you surely know the classic greeting **`"Hello, world!"`**. It is the first program we learn to write in any programming language and its only function, making it the most basic program possible, is to _print that simple message on the screen._ And just as this greeting is the first step into the world of programming, this article is for me the first step in starting this small personal space that I had neglected until now.

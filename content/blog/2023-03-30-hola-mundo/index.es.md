@@ -5,7 +5,6 @@ date: 2023-03-30T14:08:50-06:00
 tags: [personal]
 description: Soy Ricardo Antonio, desarrollador web. Este es el primer artículo de mi blog personal.
 featured_image: holamundo.png
-draft: true
 ---
 
 Si eres programador, seguro que conoces el clásico saludo **`¡Hola, mundo!`.** Es el primer programa que aprendemos a escribir en cualquier lenguaje de programación y cuya única y exclusiva función, convirtiéndolo en el más básico, es _imprimir en pantalla ese simple mensaje._ Y así como este saludo es el primer paso en el mundo de la programación, este artículo es para mí el primer paso en el comienzo de este pequeño espacio personal que hasta ahora había descuidado.
