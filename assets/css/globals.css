@@ -81,6 +81,11 @@ body {
   line-height: 1.5;
 }
 
+.hidden {
+  visibility: hidden !important;
+  height: 0;
+}
+
 .text p {
   hyphens: auto;
   -ms-hyphens: auto;
