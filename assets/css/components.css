@@ -234,6 +234,7 @@
   width: 5rem;
   background-color: var(--color-background--dim);
   transition: border 0.2s;
+  flex: 0 0 5rem;
 }
 
 .posts-list__item__image img {
