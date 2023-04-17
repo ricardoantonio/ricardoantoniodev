@@ -5,6 +5,9 @@ defaultContentLanguage = 'es'
 removePathAccents = true
 disqusShortname = 'ricardoantoniodev'
 
+[social]
+  twitter = 'rantoniodev'
+
 [params]
   twitter = 'https://twitter.com/rantoniodev'
   github = 'https://github.com/ricardoantonio'
