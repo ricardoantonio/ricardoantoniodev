@@ -65,12 +65,12 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
