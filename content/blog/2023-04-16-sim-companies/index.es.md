@@ -3,7 +3,7 @@ title: "Sim Companies: El juego de simulación económica que me brindó nuevas 
 slug: sim-companies-nuevas-oportunidades-y-retos
 date: 2023-04-16T22:05:00-06:00
 tags: [personal, simcompanies, simcotools]
-description: "Sim Companies es más que solo un juego de simulación económica, en este artículo te explico sus características más importantes y cómo me ha brindado nuevas oportunidades y retos"
+description: "Cómo un juego me brindó multiples habilidades y la motivación para ser desarrollador web"
 featured_image: post-cover.png
 draft: false
 ---
