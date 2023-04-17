@@ -22,7 +22,9 @@
       <label>{{ i18n "message" }}: <textarea name="message"></textarea></label>
     </div>
 
-    <div data-netlify-recaptcha="true"></div>
+    <div class="form-group">
+      <div data-netlify-recaptcha="true"></div>
+    </div>
 
     <div class="form-group submit">
       <a href="{{ ref . "privacy" }}" target="_blank"
